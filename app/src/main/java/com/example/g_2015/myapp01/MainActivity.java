@@ -18,6 +18,7 @@ import com.twitter.sdk.android.core.TwitterAuthToken;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
+import com.twitter.sdk.android.tweetcomposer.TweetComposer;
 
 
 public class MainActivity extends Activity {
@@ -33,7 +34,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new Crashlytics(), new Twitter(authConfig));
+        Fabric.with(this, new Crashlytics(), new Twitter(authConfig), new TweetComposer());
         setContentView(R.layout.activity_main);
         setUpViews();
     }
@@ -57,6 +58,13 @@ public class MainActivity extends Activity {
         final Intent intent = new Intent(MainActivity.this,
                 TweetListActivity.class);
         startActivity(intent);
+    }
+
+    public void ontweetbtn(View view) {
+        TweetComposer.Builder builder = new TweetComposer.Builder(this)
+                .text("#Android application under development");
+
+        builder.show();
     }
 
     public void changeLabel(View view) {
