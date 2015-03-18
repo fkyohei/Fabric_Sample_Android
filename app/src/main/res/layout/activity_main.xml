@@ -38,7 +38,7 @@
         android:id="@+id/photo_default_tweet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        twittersdk:tw__tweet_id="20"
+        twittersdk:tw__tweet_id="578055727131967489"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 

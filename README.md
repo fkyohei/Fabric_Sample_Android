@@ -10,6 +10,7 @@ Fabric・Twitter APIを使用して、いろいろ試してみる
 * Twitterアカウントを使用したユーザ認証が可能
 
 ## Embedded Tweets
+* 埋め込みツイートが可能
 
 ## Twitter API(HomeTimeline)
 * タイムラインを取得・表示
